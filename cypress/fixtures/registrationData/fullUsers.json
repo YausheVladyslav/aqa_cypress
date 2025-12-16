@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Valid user data should be accepted",
+        "input": {
+            "name": "Tester",
+            "lastName": "Testerson",
+            "email": "test@email.com",
+            "password": "Test1234",
+            "reEnterPassword": "Test1234"
+        }
+    },
+    {
+        "title": "Invalid user with short name should be rejected",
+        "input": {
+            "name": "T",
+            "lastName": "Testerson",
+            "email": "user.name@email.com",
+            "password": "Test1234",
+            "reEnterPassword": "Test1234"
+        }
+    }
+]

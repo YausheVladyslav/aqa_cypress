@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Valid last name with two words should be accepted",
+        "input": {
+            "lastName": "John Cena"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Invalid last name with 1 character should show error message",
+        "input": {
+            "lastName": "j"
+        },
+        "expected": {
+            "message": "Last name has to be from 2 to 20 characters long"
+        }
+    },
+    {
+        "title": "Valid last name with 20 characters should be accepted",
+        "input": {
+            "lastName": "testtesttesttesttest"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Invalid last name with 21 characters should show error message",
+        "input": {
+            "lastName": "testtesttesttesttests"
+        },
+        "expected": {
+            "message": "Last name has to be from 2 to 20 characters long"
+        }
+    },
+    {
+        "title": "Valid last name with average characters should be accepted",
+        "input": {
+            "lastName": "Vladyslav"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+ {
+        "title": "Invalid last name with cirilic characters should show error message",
+        "input": {
+            "lastName": "Тестер"
+        },
+        "expected": {
+            "message": "Last name is invalid"
+        }
+    },
+     {
+        "title": "Invalid last name with special symbols should show error message",
+        "input": {
+            "lastName": "te$t"
+        },
+        "expected": {
+            "message": "Last name is invalid"
+        }
+    }
+]
