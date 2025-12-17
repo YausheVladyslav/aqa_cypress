@@ -14,7 +14,7 @@ describe("Check registration form", () => {
         cy.get('.modal-footer .btn-link').should('be.visible').click()
     })
 
-    describe.skip("'Name' field validation", () => {
+    describe("'Name' field validation", () => {
 
         for (const { title, input, expected } of names) {
             it(title, () => {
@@ -40,7 +40,7 @@ describe("Check registration form", () => {
 
     })
 
-    describe.skip("'Last name' field validation", () => {
+    describe("'Last name' field validation", () => {
 
         for (const { title, input, expected } of lastNames) {
             it(title, () => {
@@ -67,7 +67,7 @@ describe("Check registration form", () => {
     })
 
 
-    describe.skip("'Email' field validation", () => {
+    describe("'Email' field validation", () => {
 
         for (const { title, input, expected } of emails) {
             it(title, () => {
@@ -93,7 +93,7 @@ describe("Check registration form", () => {
 
     })
 
-    describe.skip("'Password' field validation", () => {
+    describe("'Password' field validation", () => {
 
         for (const { title, input, expected } of passwords) {
             it(title, () => {
@@ -119,7 +119,7 @@ describe("Check registration form", () => {
 
     })
 
-    describe.skip("'Re-enter password' field validation", () => {
+    describe("'Re-enter password' field validation", () => {
 
         for (const { title, input, expected } of reEnterPasswords) {
             it(title, () => {
@@ -147,7 +147,7 @@ describe("Check registration form", () => {
 
     })
 
-    describe.skip("'Register' button functionality", () => {
+    describe("'Register' button functionality", () => {
 
         it("Button should be disabled when fields are empty", () => {
             cy.get('.modal-content').first().within(() => {
