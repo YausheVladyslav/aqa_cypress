@@ -1,0 +1,101 @@
+[
+    {
+        "title": "Valid email with standard format should be accepted",
+        "input": {
+            "email": "test@email.com"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Valid email with dot should be accepted",
+        "input": {
+            "email": "user.name@email.com"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Valid email with hyphen should be accepted",
+        "input": {
+            "email": "user-name@email.com"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Valid email with numbers should be accepted",
+        "input": {
+            "email": "u123@email.io"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Valid email with subdomain should be accepted",
+        "input": {
+            "email": "user123@email.co.uk"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+     {
+        "title": "Valid email with minimum characters should be accepted",
+        "input": {
+            "email": "a@b.co"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+      {
+        "title": " Invalid email ",
+        "input": {
+            "email": "testemail.com"
+        },
+        "expected": {
+            "message": "Email is incorrect"
+        }
+    },
+    {
+        "title": " Invalid email ",
+        "input": {
+            "email": "test@email"
+        },
+        "expected": {
+            "message": "Email is incorrect"
+        }
+    },
+    {
+        "title": " Invalid email ",
+        "input": {
+            "email": "test@.com"
+        },
+        "expected": {
+            "message": "Email is incorrect"
+        }
+    },
+    {
+        "title": " Invalid email ",
+        "input": {
+            "email": "@test.com"
+        },
+        "expected": {
+            "message": "Email is incorrect"
+        }
+    },
+    {
+        "title": " Invalid email ",
+        "input": {
+            "email": "test@email..com"
+        },
+        "expected": {
+            "message": "Email is incorrect"
+        }
+    }
+]

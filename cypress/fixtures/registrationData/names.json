@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Valid name with two words should be accepted",
+        "input": {
+            "name": "John Cena"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Invalid Name with 1 character should show error message",
+        "input": {
+            "name": "j"
+        },
+        "expected": {
+            "message": "Name has to be from 2 to 20 characters long"
+        }
+    },
+    {
+        "title": "Valid Name with 20 characters should be accepted",
+        "input": {
+            "name": "testtesttesttesttest"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+    {
+        "title": "Invalid Name with 21 characters should show error message",
+        "input": {
+            "name": "testtesttesttesttests"
+        },
+        "expected": {
+            "message": "Name has to be from 2 to 20 characters long"
+        }
+    },
+    {
+        "title": "Valid Name with average characters should be accepted",
+        "input": {
+            "name": "Vladyslav"
+        },
+        "expected": {
+            "message": ""
+        }
+    },
+ {
+        "title": "Invalid Name with cirilic characters should show error message",
+        "input": {
+            "name": "Тестер"
+        },
+        "expected": {
+            "message": "Name is invalid"
+        }
+    },
+     {
+        "title": "Invalid Name with special symbols should show error message",
+        "input": {
+            "name": "te$t"
+        },
+        "expected": {
+            "message": "Name is invalid"
+        }
+    }
+]
