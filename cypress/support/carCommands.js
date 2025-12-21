@@ -24,26 +24,12 @@
 // -- This will overwrite an existing command --
 import { faker } from '@faker-js/faker';
 
-Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
-    return originalFn(url, {
-        ...options,
-        auth: {
-            username: 'guest',
-            password: 'welcome2qauto'
-        }
-    });
-});
-
-Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
-    if (options && options.sensitive) {
-        // turn off original log
-        options.log = false
-        // create our own log with masked message
-        Cypress.log({
-            $el: element,
-            name: 'type',
-            message: '*'.repeat(text.length),
-        })
-    }
-    return originalFn(element, text, options)
+Cypress.Commands.add('createDefaultCar',() => {
+    cy.get(".panel-page .btn-primary").should('be.visible').click()
+    cy.get('.modal-content').within(() => {
+        cy.get('#addCarBrand').should('be.visible').invoke('text').should('not.be.empty')
+        cy.get('#addCarModel').should('be.visible').invoke('text').should('not.be.empty')
+        cy.get('#addCarMileage').should('be.visible').type(faker.number.int({ min: 1, max: 999998 }))
+        cy.get('.btn-primary').should('be.visible').and('contain', 'Add').click()
+    })
 })

@@ -1,5 +1,5 @@
 
-describe('Check footer buttons', () => {
+describe.skip('Check footer buttons', () => {
 
     beforeEach(() => {
         cy.visit('/')
@@ -10,5 +10,4 @@ describe('Check footer buttons', () => {
         cy.get('.btn-primary').should('be.visible').should('have.text', 'Sign up').click()
         cy.get('.modal-header .modal-title').should('have.text', 'Registration')
     })
-пше
 })

@@ -5,15 +5,6 @@ module.exports = defineConfig({
     runMode: 1,
     openMode: 0,
   },
-
-  reporter: 'mochawesome',
-  reporterOptions: {
-    reportDir: 'cypress/results',
-    overwrite: false,
-    html: false,
-    json: true,
-  },
-
   defaultCommandTimeout: 7000,
   defaultBrowser: 'chrome',
   viewportHeight: 1024,
@@ -23,7 +14,7 @@ module.exports = defineConfig({
     "BASIC_AUTH_PASSWORD": "qauto1234"
   },
   e2e: {
-    baseUrl: "https://qauto.forstudy.space/",
+    baseUrl: "https://qauto2.forstudy.space/",
     specPattern: "cypress/e2e/**/*.{test,cy}.{js,jsx,ts,tsx}",
     watchForFileChanges: false,
     experimentalRunAllSpecs: true,

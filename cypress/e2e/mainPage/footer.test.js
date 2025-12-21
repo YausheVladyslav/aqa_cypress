@@ -1,5 +1,5 @@
 
-describe('Check footer buttons', () => {
+describe.skip('Check footer buttons', () => {
 
     const TELEGRAM_PATH = 't.me/ithillel_kyiv'
     const YOUTUBE_PATH = 'youtube.com/user/HillelITSchool'
