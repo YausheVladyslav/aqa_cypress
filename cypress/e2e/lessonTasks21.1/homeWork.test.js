@@ -1,13 +1,13 @@
 import { faker } from '@faker-js/faker';
 
-describe("test describe", () => {
+describe("Create car and fuel", () => {
 
     beforeEach("Test title", () => {
         cy.visit('/')
 
     })
 
-    it("first test", () => {
+    it("Add car and fuel to registered user should be successfuly", () => {
         const user = {
             "name": faker.person.firstName(),
             "lastName": faker.person.lastName(),
