@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2025-12-21T14:09:36.652Z",
+    "end": "2025-12-21T14:09:36.689Z",
+    "duration": 37,
+    "testsRegistered": 1,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c54d6060-9647-4883-8cd5-b9077ac7f9e3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\mainPage\\header.test.js",
+      "file": "cypress\\e2e\\mainPage\\header.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "87c7b2c5-6bfe-447b-a73f-431d0ecb8548",
+          "title": "Check footer buttons",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign up button should open registration modal",
+              "fullTitle": "Check footer buttons Sign up button should open registration modal",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.get('.btn-primary').should('be.visible').should('have.text', 'Sign up').click();\ncy.get('.modal-header .modal-title').should('have.text', 'Registration');",
+              "err": {},
+              "uuid": "2a5d905e-a2ac-4893-99f9-c78e359e4701",
+              "parentUUID": "87c7b2c5-6bfe-447b-a73f-431d0ecb8548",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "2a5d905e-a2ac-4893-99f9-c78e359e4701"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

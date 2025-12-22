@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-12-21T14:09:48.499Z",
+    "end": "2025-12-21T14:09:59.835Z",
+    "duration": 11336,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b6452ea0-dbbf-4149-bda3-78ef87650572",
+      "title": "",
+      "fullFile": "cypress\\e2e\\lessonTasks21.1\\homeWork.test.js",
+      "file": "cypress\\e2e\\lessonTasks21.1\\homeWork.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b03e7457-b68f-4db2-a3ae-33bd92a9fc73",
+          "title": "test describe",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "first test",
+              "fullTitle": "test describe first test",
+              "timedOut": null,
+              "duration": 11192,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = {\n  \"name\": _faker.faker.person.firstName(),\n  \"lastName\": _faker.faker.person.lastName(),\n  \"email\": _faker.faker.number.bigInt({\n    min: 1,\n    max: 999\n  }) + _faker.faker.internet.email(),\n  \"password\": \"Test\" + _faker.faker.number.bigInt({\n    min: 1000,\n    max: 9999\n  })\n};\ncy.get('.header_signin').should('be.visible').and('contain', 'Sign In').click();\ncy.get('.modal-footer .btn-link').should('be.visible').click();\ncy.get('.modal-content').first().within(() => {\n  cy.get('#signupName').should('be.visible').type(user.name);\n  cy.get('#signupLastName').should('be.visible').type(user.lastName);\n  cy.get('#signupEmail').should('be.visible').type(user.email);\n  cy.get('#signupPassword').should('be.visible').type(user.password, {\n    sensitive: true\n  });\n  cy.get('#signupRepeatPassword').should('be.visible').type(user.password, {\n    sensitive: true\n  });\n  cy.get('.btn-primary').should(\"contain\", \"Register\").and('be.enabled').click();\n});\ncy.get('.panel-empty_message').should('be.visible').and('contain', \"You don’t have any cars in your garage\");\ncy.createDefaultCar();\ncy.addFuelExpensesToDefaultCar();",
+              "err": {},
+              "uuid": "5373f52c-78ab-42aa-b983-d8651798925e",
+              "parentUUID": "b03e7457-b68f-4db2-a3ae-33bd92a9fc73",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5373f52c-78ab-42aa-b983-d8651798925e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
