@@ -1,0 +1,7 @@
+{
+    "name": "Tester",
+    "lastName": "Tester",
+    "email": "test@test.com",
+    "password": "Qapassword123",
+    "repeatPassword": "Qapassword123"
+}

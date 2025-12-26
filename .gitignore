@@ -2,3 +2,5 @@ node_modules/
 lesson.test.js
 1-getting-started/
 queriesLesson
+mochawesome.json
+mochawesome-report

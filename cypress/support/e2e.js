@@ -17,3 +17,4 @@
 import './commands'
 import './carCommands'
 import './fuelExpensesCommands'
+import './userCommands'
